@@ -1,0 +1,10 @@
+{
+    "/posts": {
+      "target": "http://tuten-rest.herokuapp.com/timezone",
+      "secure": true,
+      "pathRewrite": {
+      "^/posts": ""
+    },
+      "changeOrigin": true
+    }
+  }

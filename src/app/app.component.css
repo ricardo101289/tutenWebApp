@@ -1,0 +1,18 @@
+.centerLogin{
+    height: -webkit-fill-available;
+    /* align-items: start; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contentForm{
+    width: 50%;
+}
+
+.imgBackground{
+    background-image: url(https://img.freepik.com/foto-gratis/lugar-trabajo-papeleria-laptop-taza-cafe_23-2148128434.jpg?size=626&ext=jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: fixed;
+}

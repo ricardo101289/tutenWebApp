@@ -1,0 +1,31 @@
+<div class="container centerLogin imgBackground">
+  <div class="contentForm">
+    <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Hora</label>
+        <input [(ngModel)]="hour" [ngModelOptions]="{standalone: true}" type="time" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+      </div>
+      <div class="form-group">
+        <label for="inputState">TimeZone</label>
+        <select id="inputState" class="form-control" [(ngModel)]="zone" [ngModelOptions]="{standalone: true}">
+          <option selected>Choose...</option>
+          <option *ngFor="let zone of timeZone" 
+          [value]="zone.offset">{{zone.offset}} {{zone.text}}</option>
+        </select>
+      </div>
+
+
+      <button type="button" (click) ="getTimeHour()" class="btn btn-success">Success</button>
+    </form>
+    <div *ngIf="alert" class="alert alert-danger" role="alert" style="margin-top: 4%">
+        *Completa todos los campos
+      </div>
+
+      <div *ngIf="responseHour" class="alert alert-info" role="alert" style="margin-top: 4%">
+          Respuesta: 
+          <div>time: {{responseHour.respuesta.time}}</div>
+          <div>timezone: {{responseHour.respuesta.timezone}}</div>
+      </div>
+  </div>
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+</div>
